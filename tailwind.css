@@ -1,0 +1,284 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --accent-1: rgba(238, 63, 98, 1);
+  --accent-2: rgba(38, 115, 38, 1);
+  --body-large-emphasized-font-family: "Poppins", Helvetica;
+  --body-large-emphasized-font-size: 16px;
+  --body-large-emphasized-font-style: normal;
+  --body-large-emphasized-font-weight: 600;
+  --body-large-emphasized-letter-spacing: 0px;
+  --body-large-emphasized-line-height: 18px;
+  --body-large-font-family: "Poppins", Helvetica;
+  --body-large-font-size: 16px;
+  --body-large-font-style: normal;
+  --body-large-font-weight: 400;
+  --body-large-letter-spacing: 0px;
+  --body-large-line-height: 18px;
+  --body-medium-emphasized-font-family: "Poppins", Helvetica;
+  --body-medium-emphasized-font-size: 14px;
+  --body-medium-emphasized-font-style: normal;
+  --body-medium-emphasized-font-weight: 600;
+  --body-medium-emphasized-letter-spacing: 0px;
+  --body-medium-emphasized-line-height: 18px;
+  --body-medium-font-family: "Poppins", Helvetica;
+  --body-medium-font-size: 14px;
+  --body-medium-font-style: normal;
+  --body-medium-font-weight: 400;
+  --body-medium-letter-spacing: 0px;
+  --body-medium-line-height: 18px;
+  --body-small-emphasized-font-family: "Poppins", Helvetica;
+  --body-small-emphasized-font-size: 12px;
+  --body-small-emphasized-font-style: normal;
+  --body-small-emphasized-font-weight: 600;
+  --body-small-emphasized-letter-spacing: 0px;
+  --body-small-emphasized-line-height: 18px;
+  --body-small-font-family: "Poppins", Helvetica;
+  --body-small-font-size: 12px;
+  --body-small-font-style: normal;
+  --body-small-font-weight: 400;
+  --body-small-letter-spacing: 0px;
+  --body-small-line-height: 18px;
+  --grey-1: rgba(255, 255, 255, 1);
+  --grey-2: rgba(240, 240, 240, 1);
+  --grey-3: rgba(159, 159, 159, 1);
+  --grey-4: rgba(115, 115, 115, 1);
+  --heading-large-emphasized-font-family: "Poppins", Helvetica;
+  --heading-large-emphasized-font-size: 22px;
+  --heading-large-emphasized-font-style: normal;
+  --heading-large-emphasized-font-weight: 700;
+  --heading-large-emphasized-letter-spacing: 0px;
+  --heading-large-emphasized-line-height: 18px;
+  --heading-medium-emphasized-font-family: "Poppins", Helvetica;
+  --heading-medium-emphasized-font-size: 16px;
+  --heading-medium-emphasized-font-style: normal;
+  --heading-medium-emphasized-font-weight: 700;
+  --heading-medium-emphasized-letter-spacing: 0px;
+  --heading-medium-emphasized-line-height: 18px;
+  --heading-small-emphasized-font-family: "Poppins", Helvetica;
+  --heading-small-emphasized-font-size: 14px;
+  --heading-small-emphasized-font-style: normal;
+  --heading-small-emphasized-font-weight: 700;
+  --heading-small-emphasized-letter-spacing: 0px;
+  --heading-small-emphasized-line-height: 18px;
+  --heading-small-font-family: "Poppins", Helvetica;
+  --heading-small-font-size: 14px;
+  --heading-small-font-style: normal;
+  --heading-small-font-weight: 400;
+  --heading-small-letter-spacing: 0px;
+  --heading-small-line-height: 18px;
+  --label-medium-font-family: "Poppins", Helvetica;
+  --label-medium-font-size: 12px;
+  --label-medium-font-style: normal;
+  --label-medium-font-weight: 400;
+  --label-medium-letter-spacing: 0px;
+  --label-medium-line-height: 18px;
+  --label-small-font-family: "Poppins", Helvetica;
+  --label-small-font-size: 11px;
+  --label-small-font-style: normal;
+  --label-small-font-weight: 400;
+  --label-small-letter-spacing: 0px;
+  --label-small-line-height: 18px;
+  --primary-1: rgba(242, 190, 68, 1);
+  --primary-2: rgba(250, 221, 122, 1);
+  --secondary-1: rgba(10, 18, 22, 1);
+  --secondary-2: rgba(34, 43, 55, 1);
+  --secondary-3: rgba(73, 81, 90, 1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
